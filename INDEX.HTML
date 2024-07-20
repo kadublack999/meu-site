@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual de Roupas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+   <!-- Cabeçalho -->
+<header>
+    <h1>Bem-vindo à Kadu Store Clothes</h1>
+    <p>Encontre as melhores roupas com os melhores preços!</p>
+    <div class="carrinho">
+        <img src="carrinho-icon.jpg" alt="Carrinho">
+        <span id="quantidade-carrinho">0</span>
+        <button id="mostrar-carrinho" class="btn">Mostrar Carrinho</button>
+        <div id="imagem-preview" class="imagem-preview">
+            <!-- A imagem será exibida aqui ao passar o mouse -->
+        </div>
+    </div>
+</header>
+
+
+    <!-- Seção de Introdução -->
+    <section id="introducao">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma loja dedicada a oferecer roupas de alta qualidade a preços acessíveis. Nossa missão é proporcionar a melhor experiência de compra online para nossos clientes.</p>
+    </section>
+
+    <!-- Seção de Produtos -->
+    <section id="produtos">
+        <h2>Nossos Produtos</h2>
+        <div class="produto">
+            <h3>Camisa Polo Branca</h3>
+            <div class="produto-info">
+                <img src="Camisa-Polo-Para-Empresa-Poliester-Masculina-Branca-Frente.jpg" alt="Camisa Polo Branca">
+                <div class="produto-detalhes">
+                    <p class="preco">R$ 99,99</p>
+                    <button class="btn adicionar" onclick="adicionarAoCarrinho(this)">Adicionar ao Carrinho</button>
+                    <button class="btn comprar">Comprar Agora</button>
+                    <p class="estoque">Quantidade em Estoque: 10</p>
+                    <button class="btn detalhes" onclick="toggleDetalhes(this)">Mais Detalhes</button>
+                    <div class="detalhes-produto" style="display: none;">
+                        <h4>Descrição Detalhada</h4>
+                        <p><span class="label">Modelo:</span> Camisa Polo</p>
+                        <p><span class="label">Cor:</span> Branca</p>
+                        <p><span class="label">Material:</span> 
+                            <ul>
+                                <li>Tecido: Algodão Piquet</li>
+                                <li>Composição: 100% Algodão</li>
+                            </ul>
+                        </p>
+                        <p><span class="label">Design:</span> 
+                            <ul>
+                                <li>Gola: Gola polo com colarinho de tecido reforçado</li>
+                                <li>Manga: Curta</li>
+                                <li>Fechamento: Fechamento por botões (geralmente três botões)</li>
+                                <li>Corte: Ajustado, clássico ou slim fit, dependendo da preferência</li>
+                                <li>Detalhes:
+                                    <ul>
+                                        <li>Pequeno logo bordado no peito (opcional)</li>
+                                        <li>Fendas laterais na barra para melhor ajuste</li>
+                                        <li>Costura reforçada nos ombros e nas mangas</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </p>
+                        <p><span class="label">Tamanho:</span> Disponível em múltiplos tamanhos (P, M, G, GG, etc.)</p>
+                        <p><span class="label">Cuidados:</span> 
+                            <ul>
+                                <li>Instruções de lavagem: Lavagem à máquina em temperatura baixa</li>
+                                <li>Secagem em temperatura baixa</li>
+                                <li>Passar a ferro em temperatura média</li>
+                                <li>Não usar alvejante</li>
+                            </ul>
+                        </p>
+                        <p><span class="label">Uso:</span> Versátil, ideal para uso casual ou semi-formal, pode ser combinado com jeans, calças sociais ou bermudas</p>
+                        <p><span class="label">Marca:</span> Kadu</p>
+                        <p><span class="label">Preço:</span> R$ 99,99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="produto">
+            <h3>Calça Jeans Polo</h3>
+            <div class="produto-info">
+                <img src="CALCA-MASC-SARJA-BASICA-SKINNY.webp" alt="Calça Jeans Polo">
+                <div class="produto-detalhes">
+                    <p class="preco">R$ 79,99</p>
+                    <button class="btn adicionar" onclick="adicionarAoCarrinho(this)">Adicionar ao Carrinho</button>
+                    <button class="btn comprar">Comprar Agora</button>
+                    <p class="estoque">Quantidade em Estoque: 5</p>
+                    <button class="btn detalhes" onclick="toggleDetalhes(this)">Mais Detalhes</button>
+                    <div class="detalhes-produto" style="display: none;">
+                        <h4>Descrição Detalhada</h4>
+                        <p><span class="label">Modelo:</span> Calça Jeans Polo</p>
+                        <p><span class="label">Cor:</span> Azul Escuro</p>
+                        <p><span class="label">Material:</span> 
+                            <ul>
+                                <li>Tecido: Denim</li>
+                                <li>Composição: 98% Algodão, 2% Elastano</li>
+                            </ul>
+                        </p>
+                        <p><span class="label">Design:</span> 
+                            <ul>
+                                <li>Cintura: Média com passantes para cinto</li>
+                                <li>Fechamento: Zíper e botão</li>
+                                <li>Bolso: Dois bolsos frontais e dois posteriores</li>
+                                <li>Corte: Skinny, ajustado ao corpo</li>
+                                <li>Detalhes:
+                                    <ul>
+                                        <li>Costura contrastante</li>
+                                        <li>Desgastes leves para um visual moderno</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </p>
+                        <p><span class="label">Tamanho:</span> Disponível em múltiplos tamanhos (36, 38, 40, 42, etc.)</p>
+                        <p><span class="label">Cuidados:</span> 
+                            <ul>
+                                <li>Instruções de lavagem: Lavagem à máquina em água fria</li>
+                                <li>Secagem: Secar ao ar livre</li>
+                                <li>Passar a ferro: Baixa temperatura, se necessário</li>
+                                <li>Não usar alvejante</li>
+                            </ul>
+                        </p>
+                        <p><span class="label">Uso:</span> Ideal para uso diário e ocasiões casuais, combina bem com camisas, camisetas e jaquetas</p>
+                        <p><span class="label">Marca:</span> Polo</p>
+                        <p><span class="label">Preço:</span> R$ 79,99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Adicione mais produtos conforme necessário -->
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section id="depoimentos">
+        <h2>Depoimentos de Clientes</h2>
+        <blockquote>
+            "A melhor loja de roupas online que já encontrei! - Cliente Satisfeito"
+        </blockquote>
+        <blockquote>
+            "Serviço incrível e produtos de alta qualidade. - Cliente Feliz"
+        </blockquote>
+    </section>
+
+    <!-- Seção do Carrinho -->
+    <div id="carrinho" style="display: none;">
+        <h2>Conteúdo do Carrinho</h2>
+        <ul id="itens-carrinho"></ul>
+        <p>Total: R$ <span id="total-carrinho">0.00</span></p>
+        <button id="fechar-carrinho" class="btn">Fechar</button>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Loja Virtual de Roupas. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
