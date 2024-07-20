@@ -57,24 +57,24 @@ header h1 {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: 400px; /* Ajuste o tamanho conforme necessário */
+    width: 400px;
     height: auto;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    display: none; /* Inicialmente escondido */
+    display: none;
     padding: 10px;
-    z-index: 1000; /* Para garantir que a imagem esteja acima de outros elementos */
+    z-index: 1000;
 }
 
 .carrinho:not(.vazio):hover .imagem-preview {
-    display: block; /* Exibe a imagem ao passar o mouse somente se o carrinho não estiver vazio */
+    display: block;
 }
 
 .imagem-preview img {
     width: 100%;
-    height: auto; /* Mantém a proporção da imagem */
+    height: auto;
 }
 
 /* Seção de Introdução */
@@ -108,14 +108,16 @@ header h1 {
 .produto-info {
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
 }
 
 .produto img {
-    width: 200px; /* Ajuste a largura conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-    border: 5px solid #333; /* Define a borda */
-    border-radius: 10px; /* Define os cantos arredondados */
-    margin-right: 20px; /* Espaço entre a imagem e os detalhes do produto */
+    width: 100%;
+    max-width: 200px; /* Limita a largura máxima */
+    height: auto;
+    border: 5px solid #333;
+    border-radius: 10px;
+    margin-right: 20px;
     transition: transform 0.3s ease;
 }
 
@@ -201,7 +203,6 @@ header h1 {
     background-color: #117a8b;
 }
 
-/* Animação para o botão Adicionar ao Carrinho */
 .btn.adicionar {
     position: relative;
 }
@@ -258,6 +259,16 @@ footer {
 
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .carrinho {
+        position: relative;
+        top: 10px;
+        right: 10px;
+    }
+
     .produto-info {
         flex-direction: column;
         align-items: flex-start;
@@ -271,5 +282,39 @@ footer {
     .btn {
         width: 100%;
         text-align: center;
+    }
+
+    .imagem-preview {
+        width: 100%;
+        left: 0;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+
+    .carrinho img {
+        width: 25px;
+        height: 25px;
+    }
+
+    #quantidade-carrinho {
+        font-size: 16px;
+        padding: 4px 8px;
+    }
+
+    .produto {
+        padding: 15px;
+    }
+
+    .detalhes-produto {
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 8px 15px;
     }
 }
